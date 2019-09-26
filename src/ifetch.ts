@@ -23,7 +23,7 @@ export const ifetch: Ifetch = async (
     .filter(ic => ic.phases.response)
     .map(ic => ic.phases.response);
   for (const responseIC of responseICs) {
-    response = await responseIC(response);
+    response = await responseIC(response, input, init);
   }
 
   return response;

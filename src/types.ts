@@ -24,5 +24,5 @@ export interface InterceptPhases {
     input: RequestInfo,
     init?: RequestInit
   ): AlsoPromised<InterceptedRequest>;
-  response?(response: Response): AlsoPromised<Response>;
+  response?(response: Response, input: RequestInfo, init?: RequestInit): AlsoPromised<Response>;
 }
